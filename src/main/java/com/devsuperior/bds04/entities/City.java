@@ -1,5 +1,7 @@
 package com.devsuperior.bds04.entities;
 
+import org.codehaus.jackson.annotate.JsonManagedReference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class City {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	
+
 	@OneToMany(mappedBy = "city")
 	private List<Event> events = new ArrayList<>();
 	

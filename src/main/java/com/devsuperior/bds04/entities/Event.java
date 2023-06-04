@@ -1,5 +1,8 @@
 package com.devsuperior.bds04.entities;
 
+import com.devsuperior.bds04.dto.EventDTO;
+import org.codehaus.jackson.annotate.JsonBackReference;
+
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -20,7 +23,7 @@ public class Event {
 	private String name;
 	private LocalDate date;
 	private String url;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "city_id")
 	private City city;
